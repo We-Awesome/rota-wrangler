@@ -6,12 +6,17 @@
 /*    V. 2.0
 /*    U. 24.01.18
 
-/*    Brand             #4A4A4A
-/*    Accent            #2C82C9
-/*    Body              #323232
-/*    Secondary text 	#656565
-/*    Border color	    #dddddd
-/*    Light background	#f7f7f7
+/* Temporary theme */
+
+/* Background (Overall interface background): #FAFAFA */
+/* Background hue (Hue of overall interface background): #F1F2F3 */
+/* Accent (Primary button and links): #0277BD */
+/* Accent hover/press (Primary button and links): #004C8C */
+/* Furniture (All lines and borders): #E8E8E8 */
+/* Text (Body and all text): #333333 */
+/* Text (Secondary text barely used at present): #9B9B9B */
+/* Validation success: #009688 */
+/* Validation error: #E53935 */
 
 /*    Baseline	        24px
 
@@ -52,8 +57,8 @@ body {
     font-weight: 300;
     line-height: 1.5;
     text-align: center;
-    color: #4A4A4A;
-    background:#4A4A4A;
+    color: #333333;
+    background:#FAFAFA;
 }
 
 a { transition: all 0.3s ease; }
@@ -87,17 +92,18 @@ footer > * {
 
 /* REGIONS */
 
-nav { background:#4A4A4A; }
+[role="nav"] { background:#FFFFFF; }
 
 [role="banner"] { background: #323232; }
 
-[aria-label="Instruction list"] { background: #F1F1F1; }
+[aria-label="Instruction list"] { background: #F1F2F3; }
 
-[role="region"] { background: #FFFFFF; }
+/* Inherits from body now */
+/* [role="region"] { background: #FFFFFF; } */
 
 [aria-label="Sign up"] { background: #F1F1F1; }
 
-[role="contactinfo"] { background: #4A4A4A; }
+[role="contactinfo"] { background: #FFFFFF; }
 
 /* TYPOGRAPHY */
 
@@ -130,10 +136,10 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: #333333;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 300;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -239,7 +245,7 @@ input[type="email"]:focus {
     color: white;
     text-transform: capitalize;;
     padding: 12px 18px;
-    border: 2px solid #DDDDDD;
+    border: 2px solid #E8E8E8;
 }
 
 @media screen and (max-width: 767px) {
@@ -262,18 +268,18 @@ input[type="email"]:focus {
 }
 
 [aria-label="Sign up"] [role="button"] {
-    border: 1px solid #2C82C9;
-    background: #2C82C9;
+    border: 1px solid #0277BD;
+    background: #0277BD;
 }
 
 [role="button"]:hover,
 [role="button"]:focus {
-    background: #4A4A4A;
+    background: #004C8C;
 }
 
 [aria-label="Sign up"] [role="button"]:hover,
 [aria-label="Sign up"] [role="button"]:focus {
-    border-color: #4A4A4A;
+    border-color: #004C8C;
 }
 
 /* STEP THROUGH */
@@ -316,7 +322,7 @@ input[type="email"]:focus {
 
     [aria-label="Instruction list"] li:not(:last-child) {
         margin-bottom: 24px;
-        border-bottom: 1px dashed #ddd;
+        border-bottom: 1px dashed #E8E8E8;
         padding-bottom: 32px;
     }
 
@@ -359,7 +365,7 @@ input[type="email"]:focus {
     }
 
     [aria-label="Instruction list"] li:nth-child(4n) {
-        pdding-right: 0;
+        padding-right: 0;
     }
 
 }
@@ -374,7 +380,8 @@ input[type="email"]:focus {
     display: inline-block;
     vertical-align: top;
     padding: 24px 32px;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
     margin: 0 auto 24px auto;
 }
 
@@ -442,7 +449,7 @@ input[type="email"]:focus {
 footer nav {
     text-align: center;
     padding: 0;
-    color: #DDDDDD;
+    color: #9B9B9B;
 }
 
 footer nav li {
@@ -452,14 +459,12 @@ footer nav li {
     width: 24px;
     padding: 4px;
     margin: 0 24px;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #E8E8E8;
 }
 
-footer nav li:hover,
-footer nav li:focus {
-    border-color: white;
-    border-width: 2px;
-    padding: 3px;
+footer nav svg:hover,
+footer nav svg:focus {
+    fill: #004C8C!important; /* not a cheat - overwriting an inline */
 }
 
 footer nav p {
