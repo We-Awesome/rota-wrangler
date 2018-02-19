@@ -3,6 +3,14 @@
     <!-- Head -->
     <head>
         <meta charset="utf-8">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113550092-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-113550092-1');
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="A new cloud platform designed for efficient and simple rota management.">
@@ -13,7 +21,7 @@
         <link href="css/placeholder.css" rel="stylesheet">
         <!-- <link rel="stylesheet' href="//basehold.it/16/"> -->
         <!--[if lt IE 9]>
-            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        	<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
         <![endif]-->
         <script src="/__/firebase/init.js"></script>
         <!-- WHole loada fav icons -->
@@ -36,7 +44,7 @@
         <meta name='theme-color' content='#ffffff'>
     </head>
     <!-- Lets begin -->
-    <body>
+    <body class="signup">
         <!-- main nav -->
         <nav role="nav">
             <h2>Main Navigation</h2>
@@ -46,18 +54,42 @@
                 </li>
             </ul>
         </nav>
-        <!-- banner -->
-        <header role="banner">
-            <h1>404</h1>
-            <h2>Page Not found</h2>
-            <p>
-                Looks like that page doesn't exist! Please check the URL for mistakes and try again.
-            </p>
-        </header>
-        <!-- main content -->
         <main>
+            <!-- signup block -->
+            <section role="region">
+                <h1>Sign me up for Rota Wrangler</h1>
+                <p>
+                    The best platform for creating and
+                    sharing rotas.
+                </p>        
+                <!-- Begin MailChimp Signup Form -->
+                <form action="https://facebook.us17.list-manage.com/subscribe/post?u=8df0ff4fc7d4a4a5113ab2264&amp;id=4ab01d28ba" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                    <!-- first name -->
+                    <label for="mce-FNAME">First name</label>
+                    <input type="text" name="FNAME" id="mce-FNAME">
+                    <!-- last name -->
+                    <label for="mce-LNAME">Last name</label>
+                    <input type="text" name="LNAME" id="mce-LNAME">
+                    <!-- email -->
+                    <label for="mce-EMAIL">Email*</label>
+                    <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="" required>
+                    <!-- t's & c's -->
+                    <!-- <label for="mce-TCS">
+                        <input type="checkbox" value="1" name="TCS" id="mce-TCS">
+                        I agree to the terms and conditions
+                    </label> -->
+                    <!-- notification -->
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_8df0ff4fc7d4a4a5113ab2264_4ab01d28ba" tabindex="-1" value="">
+                    </div>
+                    <!-- submit -->
+                    <input type="submit" value="Sign me up" name="subscribe" id="mc-embedded-subscribe" role="button">
+                </form>
+                <!--End mc_embed_signup-->
+            </section>
             <!-- social footer -->
-            <footer role="contactinfo">
+            <!-- <footer role="contactinfo">
                 <h2>Footer links</h2>
                 <nav>
                     <ul>
@@ -84,7 +116,7 @@
                         &copy; Rota Wrangler 2018
                     </p>
                 </nav>
-            </footer>
+            </footer> -->
         <!-- End main content -->
         </main>
     <!-- End content -->
@@ -111,11 +143,13 @@
         },
         {
             "@context": "http://schema.org/",
-            "@type": "Corporation",
+            "@type": "Organization",
             "name": "Rota Wrangler",
             "url": "http://rotawrangler.com",
             "sameAs": [
-                ""
+                "https://www.facebook.com/RotaWrangler",
+                "https://twitter.com/@RotaWrangler",
+                "https://www.linkedin.com/company/rota-wrangler/"
             ],
             "description": "Shift scheduling redesigned"
         },
@@ -127,5 +161,5 @@
         }
     ]
     </script>
-
+<!-- End -->
 </html>
