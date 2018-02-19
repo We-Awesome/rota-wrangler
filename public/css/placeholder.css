@@ -6,12 +6,17 @@
 /*    V. 2.0
 /*    U. 24.01.18
 
-/*    Brand             #4A4A4A
-/*    Accent            #2C82C9
-/*    Body              #323232
-/*    Secondary text 	#656565
-/*    Border color	    #dddddd
-/*    Light background	#f7f7f7
+/* Temporary theme */
+
+/* Background (Overall interface background): #FAFAFA */
+/* Background hue (Hue of overall interface background): #F1F2F3 */
+/* Accent (Primary button and links): #0277BD */
+/* Accent hover/press (Primary button and links): #004C8C */
+/* Furniture (All lines and borders): #E8E8E8 */
+/* Text (Body and all text): #333333 */
+/* Text (Secondary text barely used at present): #9B9B9B */
+/* Validation success: #009688 */
+/* Validation error: #E53935 */
 
 /*    Baseline	        24px
 
@@ -52,19 +57,37 @@ body {
     font-weight: 300;
     line-height: 1.5;
     text-align: center;
-    color: #4A4A4A;
-    background:#4A4A4A;
+    color: #333333;
+    background:#FAFAFA;
 }
 
 a { transition: all 0.3s ease; }
 
+p a {
+    font-weight: 500;
+    color: #0277BD;
+    text-decoration: none;
+}
+
+p a:hover,
+p a:focus {
+    color: #004C8C;
+}
+
 /* LAYOUTS */
 
-nav { padding: 24px; }
+nav { 
+    padding: 24px; 
+}
+
+nav[role="nav"] {
+    border-bottom: 1px solid #E8E8E8;
+}
 
 header,
 section,
-footer { padding: 48px 24px;
+footer { 
+    padding: 48px 24px;
 }
 
 header > *,
@@ -87,17 +110,18 @@ footer > * {
 
 /* REGIONS */
 
-nav { background:#4A4A4A; }
+[role="nav"] { background:#FFFFFF; }
 
 [role="banner"] { background: #323232; }
 
-[aria-label="Instruction list"] { background: #F1F1F1; }
+[aria-label="Instruction list"] { background: #F1F2F3; }
 
-[role="region"] { background: #FFFFFF; }
+/* Inherits from body now */
+/* [role="region"] { background: #FFFFFF; } */
 
 [aria-label="Sign up"] { background: #F1F1F1; }
 
-[role="contactinfo"] { background: #4A4A4A; }
+[role="contactinfo"] { background: #FFFFFF; }
 
 /* TYPOGRAPHY */
 
@@ -130,10 +154,10 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: #333333;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 300;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -192,90 +216,6 @@ h1 {
     padding: 12px 0 36px 0;
 }
 
-/* FORM - TEMP */
-
-form {
-    font-family: 'Roboto', sans-serif;
-    padding: 0 0 24px 0;
-}
-
-label {
-    display: block;
-    font-size: 14px;
-    line-height: 16px;
-    margin: 0 auto 8px -324px;
-}
-
-input {
-    font-size: 16px;
-    line-height: 20px;
-    border-radius: 0;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    box-sizing: border-box;
-    background: transparent;
-    margin: 0 auto;
-}
-
-input[type="email"] {
-    width: 312px;
-    padding: 12px;
-    background: transparent;
-    border: 2px solid #DDDDDD;
-}
-
-[aria-label="Sign up"] input[type="email"] {
-    border: 1px solid #656565;
-}
-
-input[type="email"]:hover,
-input[type="email"]:focus {
-    color: #4A4A4A;
-    background: white;
-}
-
-[role="button"] {
-    color: white;
-    text-transform: capitalize;;
-    padding: 12px 18px;
-    border: 2px solid #DDDDDD;
-}
-
-@media screen and (max-width: 767px) {
-
-    [role="button"] {
-        display: block;
-        width: 100%;
-        margin-top: 12px;
-    }
-
-    label {
-        margin-left: auto;
-        text-align: left;
-    }
-
-    input[type="email"] {
-        max-width: 100%;
-    }
-
-}
-
-[aria-label="Sign up"] [role="button"] {
-    border: 1px solid #2C82C9;
-    background: #2C82C9;
-}
-
-[role="button"]:hover,
-[role="button"]:focus {
-    background: #4A4A4A;
-}
-
-[aria-label="Sign up"] [role="button"]:hover,
-[aria-label="Sign up"] [role="button"]:focus {
-    border-color: #4A4A4A;
-}
-
 /* STEP THROUGH */
 
 [aria-label="Instruction list"] ol {
@@ -316,7 +256,7 @@ input[type="email"]:focus {
 
     [aria-label="Instruction list"] li:not(:last-child) {
         margin-bottom: 24px;
-        border-bottom: 1px dashed #ddd;
+        border-bottom: 1px dashed #E8E8E8;
         padding-bottom: 32px;
     }
 
@@ -359,7 +299,7 @@ input[type="email"]:focus {
     }
 
     [aria-label="Instruction list"] li:nth-child(4n) {
-        pdding-right: 0;
+        padding-right: 0;
     }
 
 }
@@ -374,7 +314,8 @@ input[type="email"]:focus {
     display: inline-block;
     vertical-align: top;
     padding: 24px 32px;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
     margin: 0 auto 24px auto;
 }
 
@@ -434,7 +375,7 @@ input[type="email"]:focus {
 /* SIGN UP */
 
 [aria-label="Sign up"] p {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 /* FOOTER */
@@ -442,7 +383,7 @@ input[type="email"]:focus {
 footer nav {
     text-align: center;
     padding: 0;
-    color: #DDDDDD;
+    color: #9B9B9B;
 }
 
 footer nav li {
@@ -452,14 +393,17 @@ footer nav li {
     width: 24px;
     padding: 4px;
     margin: 0 24px;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #E8E8E8;
+}
+
+footer nav svg:hover,
+footer nav svg:focus {
+    fill: #004C8C!important; /* not a cheat - overwriting an inline */
 }
 
 footer nav li:hover,
 footer nav li:focus {
-    border-color: white;
-    border-width: 2px;
-    padding: 3px;
+    border: 1px solid #004C8C;
 }
 
 footer nav p {
@@ -467,4 +411,168 @@ footer nav p {
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
+}
+
+/* FORM */
+
+form {
+    font-family: 'Roboto', sans-serif;
+    padding: 0 0 24px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0 auto 8px 0;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+}
+
+input {
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 0;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+    background: transparent;
+    margin: 0 auto;
+}
+
+input[type="email"],
+input[type="text"] {
+    max-width: 312px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+[aria-label="Sign up"] input[type="email"] {
+    border: 1px solid #656565;
+}
+
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="text"]:hover,
+input[type="text"]:focus {
+    color: #4A4A4A;
+    border-color: #0277BD;
+}
+
+input[type="checkbox"] {
+    margin: 0 8px 0 0;
+}
+
+[role="button"] {
+    display: inline-block;
+    color: white;
+    padding: 12px 24px;
+    margin: 0 0 24px 0;  
+    border: 1px solid #0277BD;
+    background: #0277BD;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+[role="button"]:hover,
+[role="button"]:focus {
+    background: #004C8C;
+    border-color: #004C8C;
+}
+
+@media screen and (max-width: 767px) {
+
+    [role="button"] {
+        display: block;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    label {
+        margin-left: auto;
+        text-align: left;
+    }
+
+    input[type="email"] {
+        max-width: 100%;
+    }
+
+}
+
+/* SIGNUP */
+
+.signup section {
+    max-width: 312px;
+    margin: 0 auto;
+}
+
+.signup h1 {
+    font-size: 1rem;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.signup p {
+    display: inline-block;
+    text-transform: lowercase;
+    padding-bottom: 48px;
+}
+
+.signup label {
+    margin-left: 0; 
+}
+
+.signup ins {
+    display: block;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    font-size: 14px;
+    color: #9B9B9B;
+    padding-bottom: 24px;
+    margin-top: -24px;
+}
+
+.signup [role="button"] {
+    margin-top: 24px;
+    padding: 12px 48px;
+}
+
+.signup ins { opacity: 0; }
+
+.signup input:focus + ins,
+.signup input:hover + ins,
+.signup input:not(:invalid):focus + label + ins,
+.signup input:not(:invalid):hover + label + ins { opacity: 1; }
+
+/* CHEERS */
+
+.confirmation main {
+    background: #FAFAFA;
+}
+
+.confirmation section {
+    max-width: 312px;
+    margin: 0 auto;
+}
+
+.confirmation h1 {
+    font-size: 28px;
+    line-height: 32px;
+    padding-bottom: 16px;
+}
+
+.confirmation p {
+    padding-bottom: 24px;
+}
+
+[role="contactinfo"] {
+    background: #FAFAFA;
 }
