@@ -76,8 +76,8 @@ p a:focus {
 
 /* LAYOUTS */
 
-nav { 
-    padding: 24px; 
+nav {
+    padding: 24px;
 }
 
 nav[role="nav"] {
@@ -86,7 +86,7 @@ nav[role="nav"] {
 
 header,
 section,
-footer { 
+footer {
     padding: 48px 24px;
 }
 
@@ -434,7 +434,9 @@ input[type="checkbox"] + label {
 }
 
 input {
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    font-weight: 300;
     line-height: 24px;
     border-radius: 0;
     outline: none;
@@ -475,11 +477,13 @@ input[type="checkbox"] {
     display: inline-block;
     color: white;
     padding: 12px 24px;
-    margin: 0 0 24px 0;  
+    margin: 0 0 24px 0;
     border: 1px solid #0277BD;
     background: #0277BD;
     font-weight: 500;
     text-decoration: none;
+    -webkit-appearance: none; /* for IOS */
+    border-radius: 0; /* for IOS */
 }
 
 [role="button"]:hover,
@@ -491,8 +495,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 767px) {
 
     [role="button"] {
-        display: block;
-        width: 100%;
+        max-width: 100%;
         margin-top: 12px;
     }
 
@@ -527,7 +530,7 @@ input[type="checkbox"] {
 }
 
 .signup label {
-    margin-left: 0; 
+    margin-left: 0;
 }
 
 .signup ins {
@@ -541,7 +544,7 @@ input[type="checkbox"] {
 }
 
 .signup [role="button"] {
-    margin-top: 24px;
+    margin: 24px auto;
     padding: 12px 48px;
 }
 
